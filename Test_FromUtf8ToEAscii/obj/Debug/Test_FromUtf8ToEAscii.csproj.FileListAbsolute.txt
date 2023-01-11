@@ -1,0 +1,7 @@
+C:\Users\jcf_s\source\git\Cs-Examples\Test_FromUtf8ToEAscii\bin\Debug\Test_FromUtf8ToEAscii.exe.config
+C:\Users\jcf_s\source\git\Cs-Examples\Test_FromUtf8ToEAscii\bin\Debug\Test_FromUtf8ToEAscii.exe
+C:\Users\jcf_s\source\git\Cs-Examples\Test_FromUtf8ToEAscii\bin\Debug\Test_FromUtf8ToEAscii.pdb
+C:\Users\jcf_s\source\git\Cs-Examples\Test_FromUtf8ToEAscii\obj\Debug\Test_FromUtf8ToEAscii.csproj.AssemblyReference.cache
+C:\Users\jcf_s\source\git\Cs-Examples\Test_FromUtf8ToEAscii\obj\Debug\Test_FromUtf8ToEAscii.csproj.CoreCompileInputs.cache
+C:\Users\jcf_s\source\git\Cs-Examples\Test_FromUtf8ToEAscii\obj\Debug\Test_FromUtf8ToEAscii.exe
+C:\Users\jcf_s\source\git\Cs-Examples\Test_FromUtf8ToEAscii\obj\Debug\Test_FromUtf8ToEAscii.pdb
