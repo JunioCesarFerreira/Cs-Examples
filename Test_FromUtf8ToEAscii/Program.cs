@@ -48,7 +48,7 @@ namespace Test_FromUtf8ToEAscii
 
             foreach(byte b in utf8Bytes)
             {
-                Console.Write(string.Format("0x{0:X2}, ", b));
+                Console.Write(string.Format("0x{0:X2} ", b));
             }
 
             Console.WriteLine("\n");
@@ -58,8 +58,16 @@ namespace Test_FromUtf8ToEAscii
             Console.WriteLine("output ascii:" + resultEAscii + "\n\nBytes:");
             foreach (char c in resultEAscii)
             {
-                Console.Write(string.Format("0x{0:X2}, ", (ushort)c));
+                Console.Write(string.Format("0x{0:X2} ", (ushort)c));
             }
+
+            // Checking with framework library
+            utf8Bytes = Encoding.UTF8.GetBytes(sampleUtf8);
+            byte[] isoBytes = Encoding.Convert(Encoding.UTF8, Encoding.GetEncoding("ISO-8859-1"), utf8Bytes);
+            string isoString = Encoding.GetEncoding("ISO-8859-1").GetString(isoBytes);
+
+            Console.WriteLine(isoString==resultEAscii? "\n\nassert OK":"\n\nassert fail");
+
             Console.ReadKey();
         }
     }
