@@ -2,15 +2,10 @@
 
 namespace LinkedNodeTree
 {
-    struct Branch
-    {
-        public int[] values;
-    }
-
     class LinkedNode
     {
-        public int Id;
-        public int IdParent;
+        public string Id;
+        public string IdParent;
     }
 
     class LinkedNodeList
@@ -20,20 +15,6 @@ namespace LinkedNodeTree
         public LinkedNodeList(int capacity)
         {
             Nodes = new List<LinkedNode>(capacity);
-        }
-
-        public static LinkedNode[] Convert(Branch branch)
-        {
-            LinkedNode[] nodes = new LinkedNode[branch.values.Length - 1];
-            for (var i = 1; i < branch.values.Length; i++)
-            {
-                nodes[i-1] = new LinkedNode
-                {
-                    IdParent = branch.values[i - 1],
-                    Id = branch.values[i]
-                };
-            }
-            return nodes;
         }
 
         public void Add(LinkedNode newNode)
@@ -53,7 +34,12 @@ namespace LinkedNodeTree
             }
         }
 
-        public List<LinkedNode> SelectChildren(int parentId)
+        public void AddRange(LinkedNode[] range)
+        {
+            foreach (LinkedNode node in range) Add(node);
+        }
+
+        public List<LinkedNode> SelectChildren(string parentId)
         {
             List<LinkedNode> result = new List<LinkedNode>(Nodes.Count / 2);
             foreach(LinkedNode linkedNode in Nodes)
